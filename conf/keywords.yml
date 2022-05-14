@@ -1,0 +1,75 @@
+# Allgemein
+test: "Test Alarm"
+erk: "Erkundungseinsatz / Unklare Lage"
+vs: "Einsatzbereitschaft"
+
+# Feuer
+b: "Kleinstbrand"
+b1: "Kleinbrand"
+b2: "Mittlerer Brand"
+b3: "Großbrand"
+b4: "Inferno"
+b5: "Weltalarm"
+ba: "Kleinstbrand außerorts"
+ba1: "Kleinbrand außerorts"
+ba2: "Mittlerer Brand außerorts"
+ba3: "Großbrand außerorts"
+ba4: "Inferno außerorts"
+ba5: "Weltalarm außerorts"
+bg: "Brandgefahr durch Gas"
+bg1: "Brandgefahr durch Gas"
+bg2: "Brandgefahr durch Gas"
+bi: "Fahrzeugbrand innerorts"
+bi1: "Fahrzeugbrand innerorts (PKW / Moped)"
+bi2: "Fahrzeugbrand innerorts (LKW / Bus)"
+
+# BMA
+o: "Ausgelöste Brandmeldeanlage"
+ob: "Verbale Feuermeldung"  # bei einem Objekt mit Brandmeldeanlage oder Alarmplan
+
+# Technische Hilfeleistung
+h: "Kleine Hilfeleistung"
+h1: "Erweiterte Hilfeleistung"
+
+hbi: "Auslaufende Betriebsstoffe innerorts"
+hbi1: "Auslaufende Betriebsstoffe innerorts"
+hbi2: "Auslaufende Betriebsstoffe innerorts"
+hba: "Auslaufende Betriebsstoffe außerhalb"
+hba1: "Auslaufende Betriebsstoffe außerhalb"
+hba2: "Auslaufende Betriebsstoffe außerhalb"
+
+hm: "Person in Notlage"
+hm1: "Hilfeleistung mit Menschengefährdung (PKW / Kleintransporter)"
+hm2: "Hilfeleistung mit Menschengefährdung (LKW / Bus / Zug)"
+hm3: "Schwerst eingeklemmte Person"
+
+ht: "Kleintierrettung"
+ht1: "Tierrettung"
+ht2: "Großtierrettung"
+
+# Medizinisches
+r: "Medizinischer Notfall"
+r,n: "Medizinischer Notfall akut"
+kl: "Krankentransport liegend"
+ks: "Krankentransport sitzend"
+
+# Wasserrettung
+hw: "Wasserrettung klein"
+hw1: "Wasserrettung"
+hw2: "Wasserrettung akut"
+wrett: "Wasserrettung Steinhuder Meer"
+
+# ABC
+abc: "Gasaustritt / Unklare Lage mit Gefahrgut / Messeinsatz"
+abc1: "Lage mit Gefahrgut / Messeinsatz"
+abc2: "Austretendes Gefahrgut"
+
+# Sonstiges
+ov: "Personensuche"
+hps: "Person droht mit Suizid"
+hps1: "Suizid"
+hps2: "Suizid"
+
+uvor: "Unwetter, Voralarm"
+us: "Unwetter, Sturmschaden"
+uw: "Unwetter, Wasserschaden"

@@ -1,0 +1,73 @@
+general:
+  debug: false
+
+serial:
+  port: /dev/ttyUSB0
+  baud: 9600
+
+# The key for the department ("musterstadt" in the first case) is used as a prefix to reference in the RIC mapping below
+# so that the script knows to which department the message should be sent to. The value is the API token.
+# You can define multiple departments if you want to dispatch messages to different DIVERA organizations.
+divera:
+  departments:
+    musterstadt: 9PSDTPGLjwpsAaSngTlYy2CDMRzp4gYlLEtGF9xufNCLSjHKoSrY6YbKOvOf4rjx
+    musterhausen: jH1TuSokKsKiRa7jYuPSnAQATK77ISmF4c7LhJVnFZhYtHGLbeWstJwkSquljCLp
+
+# Usually the sub-rics are used to distinct between different alarming methods for the same group.
+# Currently it is not supported to address different groups just by the sub ric.
+# You can use this setting to add a suffix to the keyword which indicates the method of dispatch.
+subrics:
+  A: (still)
+  B: (laut)
+  C: (info)
+  D: (abbruch)
+
+# Some general settings about the RICs and the mapping of the pager.
+# You can just address the general RIC programming slot, not for all of the four sub-rics. This is handled
+# by the setting above. It is possible to address multiple departments with their ric as mentioned above.
+# The value consists of comma separated values, each having the department key and the ric as set in DIVERA.
+# Leave the value empty if you don't care about the slot.
+##
+# The BOSS 925 has slots for 32 RICs with 4 sub rics each. The config below already defines these 32 slots.
+# Adjust it to the slot count of your connected pager!
+rics:
+
+  # ric overwrites if debug = true
+  debug: musterstadt:debug
+
+  # group to send an alarm to if ping delay is too high
+  ping: musterstadt:debug
+
+  # RIC mapping (without sub-rics) of the connected pager
+  01:
+  02: musterstadt:vollalarm
+  03: musterstadt:dienstgruppe_1
+  04: musterstadt:dienstgruppe_2
+  05:
+  06:
+  07:
+  08:
+  09:
+  10: musterstadt:probealarm, musterhausen:probe
+  11:
+  12:
+  13:
+  14:
+  15:
+  16:
+  17:
+  18:
+  19:
+  20:
+  21:
+  22:
+  23:
+  24:
+  25:
+  26:
+  27:
+  28:
+  29:
+  30:
+  31:
+  32:

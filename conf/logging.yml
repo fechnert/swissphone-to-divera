@@ -1,0 +1,26 @@
+version: 1
+
+formatters:
+  normal:
+    format: '{asctime} {levelname:>7} | {message}'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+    style: '{'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    formatter: normal
+    level: DEBUG
+  file:
+    class : logging.FileHandler
+    formatter: normal
+    filename: log/main.log
+    level: DEBUG
+
+loggers:
+  main:
+    handlers:
+      - console
+      - file
+    level: DEBUG
+    propagate: true
