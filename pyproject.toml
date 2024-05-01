@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "swissphone-to-divera"
+version = "0.1.0"
+description = ""
+authors = ["Tim Fechner <tim.fechner@mailbox.org>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "swissphone_to_divera"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyserial = "^3.5"
+PyYAML = "^6.0.1"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

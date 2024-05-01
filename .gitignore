@@ -3,3 +3,6 @@ log/*
 venv/
 .idea/
 !*/.gitkeep
+.envrc
+poetry.toml
+

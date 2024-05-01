@@ -1,5 +1,7 @@
 # Swissphone to Divera
 
+![Static Badge](https://img.shields.io/badge/python-3.9+-blue) [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 Read and parse (POCSAG) messages of any [Swissphone] pager with a serial port and forward these to [Divera 24/7].
 
 
