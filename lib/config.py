@@ -16,7 +16,7 @@ class Config:
 
         log.info("Loading config ...")
 
-        with open(filename, 'r') as config_file:
+        with open(filename, "r") as config_file:
             raw_config = yaml.safe_load(config_file.read())
 
         instance = cls()
@@ -32,10 +32,10 @@ class Config:
         """Get the department and rics for a given position"""
 
         try:
-             if str(position).isnumeric():
-                 rics = self.rics[int(position)]
-             else:
-                 rics = self.rics[str(position)]
+            if str(position).isnumeric():
+                rics = self.rics[int(position)]
+            else:
+                rics = self.rics[str(position)]
         except KeyError:
             return None
 
@@ -43,9 +43,9 @@ class Config:
             return None
 
         groups = list()
-        for ric in rics.split(','):
+        for ric in rics.split(","):
             ric = ric.strip()
-            groups.append(ric.split(':', 1))
+            groups.append(ric.split(":", 1))
 
         return groups
 
@@ -64,8 +64,8 @@ class Config:
             if not targets:
                 continue
 
-            for ric in targets.split(','):
-                if ':' not in ric:
+            for ric in targets.split(","):
+                if ":" not in ric:
                     raise ValidationError(f'No department mentioned for ric "{position}" ({targets})')
 
     def _validate_ric_departments(self):
@@ -77,5 +77,5 @@ class Config:
                 continue
 
             for department, _ in groups:
-                if department not in self.divera['departments'].keys():
+                if department not in self.divera["departments"].keys():
                     raise ValidationError(f'Unknown department "{department}" for ric "{position}" ({targets})!')

@@ -11,10 +11,10 @@ from lib.parser import Parser
 from lib.reader import Boss925Reader
 
 
-LOGGING_CONF = 'conf/logging.yml'
-PROJECT_CONF = 'conf/config.yml'
+LOGGING_CONF = "conf/logging.yml"
+PROJECT_CONF = "conf/config.yml"
 
-with open(LOGGING_CONF, 'r') as logging_conf_file:
+with open(LOGGING_CONF, "r") as logging_conf_file:
     logging_conf = yaml.safe_load(logging_conf_file.read())
 logging.config.dictConfig(logging_conf)
 
@@ -56,7 +56,7 @@ class AlertController:
             log.info("Incoming alarm detected!")
             log.info("  RIC = %s%s", transmission["ric"], transmission["subric"])
             log.info("  MSG = %s...", transmission["message"][:64])
-            rics = self.config.get_rics(transmission['ric'])
+            rics = self.config.get_rics(transmission["ric"])
             data = self.parser.parse_transmission(transmission)
 
             self.divera.alert(rics, data)
@@ -69,11 +69,11 @@ class AlertController:
 
             if not self._last_ping_alarmed:
                 self._last_ping_alarmed = True
-                rics = self.config.get_rics('ping')
+                rics = self.config.get_rics("ping")
                 data = {
-                    'title': 'Keine Meldungen!',
-                    'text': f'Keine Rückmeldung vom DME!\n\nLetzter Ping: {self._last_ping}\nDelay: {delay}',
-                    'priority': False
+                    "title": "Keine Meldungen!",
+                    "text": f"Keine Rückmeldung vom DME!\n\nLetzter Ping: {self._last_ping}\nDelay: {delay}",
+                    "priority": False,
                 }
 
                 self.divera.alert(rics, data)
@@ -85,7 +85,7 @@ class AlertController:
         self._last_ping_alarmed = False
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     try:
         config = Config.from_file(filename=PROJECT_CONF)
